@@ -1,10 +1,10 @@
 # ProAPISets
 
-See a demo at: http://proitemsets.azurewebsites.net/
+See a demo at http://proitemsets.azurewebsites.net/
 
 # What is it?
 
-What it does: Copy your favorite pro players! Using the Riot League of Legends API, we built a database of games that pro players in NA have played in Season 5. We then extracted the builds that each player did in every game, and used clustering analysis to try to identify a common build that each player usually uses for a champion. The website is a frontend to the results of this clustering analysis, and will allow you to choose a player/champion pair and downloaded the item set returned by our clustering analysis.
+Copy your favorite pro players! Using the Riot League of Legends API, we built a database of games that pro players in NA have played in Season 5. We then extracted the builds that each player did in every game, and used clustering analysis to try to identify a common build that each player usually uses for a champion. The website is a frontend to the results of this clustering analysis, and will allow you to choose a player/champion pair and downloaded the item set returned by our clustering analysis.
 
 # Details
 
@@ -18,7 +18,7 @@ Additionally, there are some differences in item purchase orders that are not re
 
 After being split into clusters by our DBScan pass, we made an item set out of the "center" of the largest cluster, reasoning that a larger cluster is more likely to be the player's "core" build. We defined the center of the cluster as the item build which had the lowest cumulative distance from all other items in that cluster, using the distance mechanisms described above. Then, if there happened to be a game that was identically built as this center (distance 0), but was longer (the game went on longer), we would select the new center.
 
-This center was then turned into the item set and stored in the database for the website to display.
+This center was then turned into the item set and stored in the database for the website to display. If no clusters were able to be formed, the website will inform the user that the summoner has not played the champion enough.
 
 # Setup (Host the Website)
 
