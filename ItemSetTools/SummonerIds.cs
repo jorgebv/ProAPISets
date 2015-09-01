@@ -84,7 +84,7 @@ namespace ItemSetTools
             // RNG
             {"Crumbzz", SummonerIds.RNG.Crumbzz},
             {"Maple", SummonerIds.RNG.Maple},
-            {"AlexIch", SummonerIds.RNG.AlexIch},
+            {"Alex Ich", SummonerIds.RNG.AlexIch},
             {"Remilia", SummonerIds.RNG.Remilia},
             {"RF Legendary", SummonerIds.RNG.RF},
             // TSM
