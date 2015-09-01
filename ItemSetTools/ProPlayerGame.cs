@@ -10,6 +10,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ItemSetTools
 {
+    /// <summary>
+    /// The Entity Framework DbContext we will be using.
+    /// The tables are a table of ProPlayerGames, and a
+    /// table of ProPlayerItemSets
+    /// </summary>
     public class GameContext : DbContext
     {
         public DbSet<ProPlayerGame> Games { get; set; }
@@ -37,6 +42,10 @@ namespace ItemSetTools
         }
     }
 
+    /// <summary>
+    /// This class is stored in the database and defines the unique key for
+    /// an item set
+    /// </summary>
     public class ProPlayerItemSet
     {
         [Key]
@@ -60,6 +69,9 @@ namespace ItemSetTools
         }
     }
 
+    /// <summary>
+    /// This class is stored in the database and defines the unique key for a pro player game
+    /// </summary>
     public class ProPlayerGame
     {
         [Key][Column(Order = 0)]

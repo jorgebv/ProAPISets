@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace ItemSetTools
 {
+    /// <summary>
+    /// This class contains constants that can be used to map
+    /// well known summoners (in this case, pros), to summoner IDs
+    /// </summary>
     public class SummonerIds
     {
         public static List<int> Pros = new List<int>()

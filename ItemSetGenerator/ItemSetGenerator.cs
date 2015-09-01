@@ -7,6 +7,19 @@ using ItemSetTools;
 
 namespace ItemSetGenerator
 {
+    /// <summary>
+    /// This program will loop through the database and create item sets for
+    /// each summoner/champion pair in the database. (Summoner must have
+    /// played at least 5 games with the champion for this program to try
+    /// to generate an item set for it).
+    /// 
+    /// Item set generation may not succeed if clusters can't be identified.
+    /// In this case, the database is not modified.
+    /// 
+    /// Running this will overwrite existing item sets.
+    /// 
+    /// The database should be populated with the GameIndexer program.
+    /// </summary>
     class ItemSetGenerator
     {
         static void Main(string[] args)
@@ -85,8 +98,6 @@ namespace ItemSetGenerator
                 }
                 context.SaveChanges();
             }
-            // TODO: remove
-            Console.ReadLine();
         }
     }
 }

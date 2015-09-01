@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ItemSetTools
 {
+    /// <summary>
+    /// This represents a LoL item and is used by the rest of the ItemSetTools
+    /// </summary>
     public class Item : IEquatable<Item>, IComparable<Item>
     {
         /// <summary>

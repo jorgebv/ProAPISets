@@ -11,10 +11,15 @@ using System.Configuration;
 
 namespace GameIndexer
 {
+    /// <summary>
+    /// This program loads stores each pro game into the database. Another program can
+    /// consume this information as it seems fit.
+    /// 
+    /// This will query the entire match list, but will not refetch timeline and game info
+    /// for an entry already in the database.
+    /// </summary>
     class Program
     {
-
-
         static void Main(string[] args)
         {
             try

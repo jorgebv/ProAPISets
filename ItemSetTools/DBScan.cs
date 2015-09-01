@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ItemSetTools
 {
+    /// <summary>
+    /// This class wraps a pro player and is used in the DBScan algorithm below
+    /// </summary>
     public class DBScanProPlayerGame
     {
         public const int NOISE = -1;

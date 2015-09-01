@@ -9,6 +9,10 @@ using System.Configuration;
 
 namespace ItemSetTools
 {
+    /// <summary>
+    /// The ItemUtils uses the Riot API to get item info so that Riot API code
+    /// is not scattered throughout the ItemSetTools
+    /// </summary>
     public class ItemUtils
     {
         private static StaticItemList itemList;
