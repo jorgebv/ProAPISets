@@ -171,14 +171,14 @@
                     url: "GetItemSetJson/" + summonerName + "/" + championName
                 }).success(function (data) {
                     var viewArea = document.getElementById("JsonViewArea");
-                    viewArea.innerText = data;
+                    viewArea.textContent = data;
 
                     var directionArea = document.getElementById("Directions");
                     var folderName = NameToKey[championName];
-                    directionArea.innerText = "Put this in a file named: " + summonerName + "_" + championName + ".json in the folder:\n League of Legends\\Config\\Champions\\" + folderName + "\\Recommended\\"
+                    directionArea.textContent = "Put this in a file named: " + summonerName + "_" + championName + ".json in the folder:\n League of Legends\\Config\\Champions\\" + folderName + "\\Recommended\\"
                 }).error(function (a, b, c) {
                     var viewArea = document.getElementById("JsonViewArea");
-                    viewArea.innerText = "This summoner has not played this champion enough!";
+                    viewArea.textContent = "This summoner has not played this champion enough!";
                 });
             })
         });
