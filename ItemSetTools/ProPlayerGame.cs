@@ -1,12 +1,12 @@
-﻿using System;
+﻿using ItemSetTools;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ItemSetTools;
-using System.Data.Entity;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ItemSetTools
 {
@@ -21,9 +21,9 @@ namespace ItemSetTools
 
         public DbSet<ProPlayerItemSet> ItemSets { get; set; }
 
-        public GameContext() : base("DBConnectionInfo")
+        public GameContext()
+            : base("DBConnectionInfo")
         {
-
         }
 
         /// <summary>
@@ -33,7 +33,8 @@ namespace ItemSetTools
         /// <param name="modelBuilder">modelBuilder</param>
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            Database.SetInitializer<GameContext>(new DropCreateDatabaseIfModelChanges<GameContext>());
+            // TODO: REMOVE THIS BEFORE WE PUBLISH
+            // Database.SetInitializer<GameContext>(new DropCreateDatabaseIfModelChanges<GameContext>());
 
             modelBuilder.ComplexType<ItemPurchaseTimeline>()
                 .Ignore(p => p.Count)
@@ -51,14 +52,15 @@ namespace ItemSetTools
         [Key]
         [Column(Order = 0)]
         public long SummonerId { get; set; }
+
         [Key]
         [Column(Order = 1)]
         public long ChampionId { get; set; }
+
         public virtual string ItemSetJson { get; set; }
 
         public ProPlayerItemSet()
         {
-
         }
 
         public ProPlayerItemSet(long summonerId, long championId, string itemSetJson)
@@ -74,10 +76,14 @@ namespace ItemSetTools
     /// </summary>
     public class ProPlayerGame
     {
-        [Key][Column(Order = 0)]
+        [Key]
+        [Column(Order = 0)]
         public long SummonerId { get; set; }
-        [Key][Column(Order = 1)]
+
+        [Key]
+        [Column(Order = 1)]
         public long GameId { get; set; }
+
         public long ChampionId { get; set; }
         public virtual ItemPurchaseTimeline ItemPurchaseTimeline { get; set; }
 

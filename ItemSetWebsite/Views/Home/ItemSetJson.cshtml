@@ -1,0 +1,30 @@
+﻿@model     ItemSetTools.ProPlayerItemSet
+
+@using ItemSetTools
+
+@{
+    ViewBag.Title = "ItemSetJson";
+}
+
+<div class="jumbotron">
+    <form>
+        <select id="SummonerName">
+            @{ var summoners = SummonerIds.NameToSummonerId.Keys.ToList(); summoners.Sort(); }
+            @foreach (string summoner in summoners)
+            {
+                <option value="@summoner">@summoner</option>
+            }
+        </select>
+        <select id="ChampionName">
+            @{ var champions = ChampionIds.NameToId.Keys.ToList(); champions.Sort(); }
+            @foreach (string champion in champions)
+            {
+                <option value="@champion">@champion</option>
+            }
+        </select>
+        <input id="GetItemSetButton" type="button" value="Get Item Set" />
+    </form>
+    <hr />
+    <h1>Item Set Json</h1>
+    <p id="JsonViewArea" class="lead"></p>
+</div>

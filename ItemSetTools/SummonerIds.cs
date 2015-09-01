@@ -55,6 +55,58 @@ namespace ItemSetTools
             DIG.Shiphtur
         };
 
+        public static Dictionary<string, int> NameToSummonerId = new Dictionary<string, int>()
+        {
+             // TiP
+            {"Impact", SummonerIds.TiP.Impact},
+            {"Rush", SummonerIds.TiP.Rush},
+            {"Adrian", SummonerIds.TiP.Adrian},
+            {"Apollo", SummonerIds.TiP.Apollo},
+            {"Gate", SummonerIds.TiP.Gate},
+            // C9
+            {"Sneaky", SummonerIds.C9.Sneaky},
+            {"Hai", SummonerIds.C9.Hai},
+            {"Lemon", SummonerIds.C9.LemonNation},
+            {"Balls", SummonerIds.C9.Balls},
+            {"Incarnation", SummonerIds.C9.Incarnation},
+            // TL
+            {"Piglet", SummonerIds.TL.Piglet},
+            {"Quas", SummonerIds.TL.Quas},
+            {"Fenix", SummonerIds.TL.Fenix},
+            {"IWillDominate", SummonerIds.TL.IWillDominate},
+            {"Xpecial", SummonerIds.TL.Xpecial},
+            // CLG
+            {"ZionSpartan", SummonerIds.CLG.ZionSpartan},
+            {"Pobelter", SummonerIds.CLG.Pobelter},
+            {"Doublelift", SummonerIds.CLG.Doublelift},
+            {"aphromoo", SummonerIds.CLG.aphromoo},
+            {"Xmithie", SummonerIds.CLG.Xmithie},
+            // RNG
+            {"Crumbzz", SummonerIds.RNG.Crumbzz},
+            {"Maple", SummonerIds.RNG.Maple},
+            {"AlexIch", SummonerIds.RNG.AlexIch},
+            {"Remilia", SummonerIds.RNG.Remilia},
+            {"RF Legendary", SummonerIds.RNG.RF},
+            // TSM
+            {"Dyrus", SummonerIds.TSM.Dyrus},
+            {"Santorin", SummonerIds.TSM.Santorin},
+            {"Lustboy", SummonerIds.TSM.Lustboy},
+            {"WildTurtle", SummonerIds.TSM.WildTurtle},
+            {"Bjergsen", SummonerIds.TSM.Bjergsen},
+            // Gravity
+            {"Bunny FuFuu", SummonerIds.GV.BunnyFuFuu},
+            {"Move", SummonerIds.GV.Move},
+            {"Altec", SummonerIds.GV.Altec},
+            {"Keane", SummonerIds.GV.Keane},
+            {"Hauntzer", SummonerIds.GV.Hauntzer},
+            // Dignitas
+            {"CoreJJ", SummonerIds.DIG.CoreJJ},
+            {"Kiwikid", SummonerIds.DIG.Kiwikid},
+            {"Shiphtur", SummonerIds.DIG.Shiphtur},
+            {"Helios", SummonerIds.DIG.Helios},
+            {"Gamsu", SummonerIds.DIG.Gamsu}
+        };
+
         public class C9
         {
             public const int Sneaky = 51405;
@@ -78,7 +130,7 @@ namespace ItemSetTools
             public const int Piglet = 65389094;
             public const int Quas = 50539313;
             public const int Fenix = 65409091;
-            public const int IWillDominate = 68619391;
+            public const int IWillDominate = 38249375;
             public const int Xpecial = 19199530;
         }
 

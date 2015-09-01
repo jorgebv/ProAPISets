@@ -1,7 +1,8 @@
-﻿using System;
+﻿using ItemSetTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ItemSetTools;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ItemSetToolsUnitTest
 {
@@ -58,6 +59,16 @@ namespace ItemSetToolsUnitTest
             var itemBlock = new ItemBlock(name, itemList);
             Assert.AreSame(itemList, itemBlock.Items);
             Assert.AreSame(name, itemBlock.Name);
+        }
+
+        [TestMethod]
+        public void TestStuff()
+        {
+            using (GameContext context = new GameContext())
+            {
+                ProPlayerItemSet itemSet = context.ItemSets.SingleOrDefault(t => t.SummonerId == SummonerIds.C9.Balls && t.ChampionId == 8);
+                Assert.IsNotNull(itemSet);
+            }
         }
     }
 }

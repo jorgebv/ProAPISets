@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameIndexer", "GameIndexer\GameIndexer.csproj", "{007480C3-3501-4DA0-86E7-F5599782E154}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemSetToolsUnitTest", "ItemSetToolsUnitTest\ItemSetToolsUnitTest.csproj", "{41F5B84D-FE0B-442E-A176-DF34964BD237}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemSetGenerator", "ItemSetGenerator\ItemSetGenerator.csproj", "{FC14EDEC-71C7-47DF-9B86-BE3ED00BE1FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemSetWebsite", "ItemSetWebsite\ItemSetWebsite.csproj", "{43319913-AB62-42CA-A976-0F9AF51B560E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{FC14EDEC-71C7-47DF-9B86-BE3ED00BE1FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC14EDEC-71C7-47DF-9B86-BE3ED00BE1FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC14EDEC-71C7-47DF-9B86-BE3ED00BE1FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43319913-AB62-42CA-A976-0F9AF51B560E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43319913-AB62-42CA-A976-0F9AF51B560E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43319913-AB62-42CA-A976-0F9AF51B560E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43319913-AB62-42CA-A976-0F9AF51B560E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
